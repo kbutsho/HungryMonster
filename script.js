@@ -25,10 +25,10 @@ const displayMeals = meals => {
         .then(res => res.json())
         .then(data => randomItemInfo(data[0]));
     }
-    const randomItemInfo = Meal=> {
+    const randomItemInfo = mealItems=> {
         const ItemInfoDiv = document.getElementById('itemsDetails');
         ItemInfoDiv.innerHTML = `
-        <h1>${Meal.strIngredient}</h1>       
+        <h1>${mealItems.strIngredient}</h1>       
     `
     }
 
